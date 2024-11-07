@@ -1,0 +1,17 @@
+Define function abx:
+    Prompt user for input in the form "a*b^x"
+    
+    Use regular expression to check if the input matches the form "a*b^x"
+    If a match is found:
+        Extract and convert the values:
+            a = the first number in the input (float)
+            b = the base number (float)
+            x = the exponent (float)
+        
+        If b is equal to 1:
+            Display an error message that b must not equal 1
+        Else:
+            Calculate y as a * (b^x)
+            Print the result y
+    Else:
+        Print an error message indicating the input is not in the correct form

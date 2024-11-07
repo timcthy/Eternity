@@ -1,6 +1,6 @@
 import re
 
-def ab():
+def abx():
     userInput = input("Enter the function in form of a*b^x: ")
     match = re.match(r"([\d.]+)\s*\*\s*([\d.]+)\s*\^\s*([\d.-]+)", userInput)
     if match:
@@ -14,4 +14,4 @@ def ab():
             print(y)
     else:
         print("Not in form of a*b^x")
-ab()
+abx()
