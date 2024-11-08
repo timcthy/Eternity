@@ -9,13 +9,14 @@ def arccos(x, terms=10):
     if x < -1 or x > 1:
         raise ValueError("Input must be between -1 and 1 for arccos")
     if x == 0:
-        return 0.0;
+        return 0;
     if x == -1:
         return math.pi
 
     # Initialize with the first term, which is π/2 - x
     result = math.pi / 2 - x
 
+    # Use Taylor series for accuracy
     # The higher the term, the more accurate the result
     x_pow = x  # Start with x^1
     sign = -1
