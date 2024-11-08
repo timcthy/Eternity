@@ -1,5 +1,9 @@
 import math
 
+# arccos(x) returns a value in radians. rad_to_deg(radians) will convert this value to degrees
+def rad_to_deg(radians):
+    return radians * (180 / 3.141592653589793)
+
 # The higher the term, the more accurate the result
 def arccos(x, terms=10):
     if x < -1 or x > 1:
@@ -26,4 +30,5 @@ def arccos(x, terms=10):
 # Main
 if __name__ == '__main__':
     print(arccos(0.1))
+    print(rad_to_deg(arccos(0.1)))
 
