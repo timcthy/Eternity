@@ -31,4 +31,3 @@ def arccos(x, terms=10):
 if __name__ == '__main__':
     print(arccos(0.1))
     print(rad_to_deg(arccos(0.1)))
-
