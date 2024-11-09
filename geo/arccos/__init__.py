@@ -4,11 +4,15 @@ import math
 def rad_to_deg(radians):
     return radians * (180 / 3.141592653589793)
 
+def deg_to_rad(degrees):
+    return degrees * (3.141592653589793 / 180)
+
+
 # The higher the term, the more accurate the result
 def arccos(x, terms=10):
     if x < -1 or x > 1:
         raise ValueError("Input must be between -1 and 1 for arccos")
-    if x == 0:
+    if x == 1:
         return 0;
     if x == -1:
         return math.pi
@@ -30,5 +34,8 @@ def arccos(x, terms=10):
 
 # Main
 if __name__ == '__main__':
-    print(arccos(0.1))
-    print(rad_to_deg(arccos(0.1)))
+    rad = arccos(0.3)
+    print(rad)
+    print(rad_to_deg(rad))
+    print(deg_to_rad(rad_to_deg(rad)))
+
