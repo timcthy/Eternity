@@ -33,7 +33,7 @@ def test_rad_to_deg_positive():
     assert deg == pytest.approx(72.5729)
 
 def test_deg_to_rad_positive():
-    rad = geo.arccos.arccos(0.3, 10)
+    rad = geo.arccos.arccos(0.3)
     deg = geo.arccos.rad_to_deg(rad)
     to_rad = geo.arccos.deg_to_rad(deg)
     assert to_rad == pytest.approx(1.266636)
@@ -43,11 +43,11 @@ def test_deg_to_rad_positive():
 # Tests where x>-1 and x<0
 # for arccos, rad_to_deg, deg_to_rad
 def test_arccos_negative():
-    rad = geo.arccos.arccos(-0.6, 10)
+    rad = geo.arccos.arccos(-0.6)
     assert rad == pytest.approx(2.197712)
 
 def test_rad_to_deg_negative():
-    rad = geo.arccos.arccos(-0.6, 10)
+    rad = geo.arccos.arccos(-0.6)
     deg = geo.arccos.rad_to_deg(rad)
     assert deg == pytest.approx(125.9196)
 
@@ -62,16 +62,16 @@ def test_deg_to_rad_negative():
 # Tests where x=1
 # for arccos, rad_to_deg, deg_to_rad
 def test_arccos_one():
-    rad = geo.arccos.arccos(1, 10)
+    rad = geo.arccos.arccos(1)
     assert rad == pytest.approx(0)
 
 def test_rad_to_deg_one():
-    rad = geo.arccos.arccos(1, 10)
+    rad = geo.arccos.arccos(1)
     deg = geo.arccos.rad_to_deg(rad)
     assert deg == pytest.approx(0)
 
 def test_deg_to_rad_one():
-    rad = geo.arccos.arccos(1, 10)
+    rad = geo.arccos.arccos(1)
     deg = geo.arccos.rad_to_deg(rad)
     to_rad = geo.arccos.deg_to_rad(deg)
     assert to_rad == pytest.approx(0)

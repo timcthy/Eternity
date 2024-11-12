@@ -1,15 +1,15 @@
 import math
 
 # arccos(x) returns a value in radians. rad_to_deg(radians) will convert this value to degrees
-def rad_to_deg(radians):
+def rad_to_deg(radians: float) -> float:
     return radians * (180 / 3.141592653589793)
 
-def deg_to_rad(degrees):
+def deg_to_rad(degrees: float) -> float:
     return degrees * (3.141592653589793 / 180)
 
 
 # The higher the term, the more accurate the result
-def arccos(x, terms=10):
+def arccos(x: float) -> float:
     if x < -1 or x > 1:
         raise ValueError("Input must be between -1 and 1 for arccos")
     if x == 1:
@@ -24,7 +24,7 @@ def arccos(x, terms=10):
     # The higher the term, the more accurate the result
     x_pow = x  # Start with x^1
     sign = -1
-    for n in range(1, terms):
+    for n in range(1, 10): # Used 10 for accuracy. The higher -> the more accurate
         x_pow *= x * x  # Increment to the next power of x^3, x^5, etc.
         coef = (2 * n - 1) / (2 * n * (2 * n + 1))  # Coefficients: 1/6, 3/40, etc.
         result += sign * coef * x_pow
