@@ -75,3 +75,5 @@ def test_deg_to_rad_one():
     deg = geo.arccos.rad_to_deg(rad)
     to_rad = geo.arccos.deg_to_rad(deg)
     assert to_rad == pytest.approx(0)
+
+# EOF
